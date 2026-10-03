@@ -1,0 +1,35 @@
+{
+  "format": "9:16",
+  "title": ["Lançar um", {"pill": "produto"}],
+  "subtitle": "do zero ao primeiro cliente em 6 passos",
+  "legend": false,
+  "categories": {
+    "a": {"label": "Validar", "color": "#2457d6", "tint": "#e7eefc"},
+    "b": {"label": "Construir", "color": "#128a5e", "tint": "#e3f3eb"},
+    "c": {"label": "Vender", "color": "#c27a0e", "tint": "#fbf0dc"}
+  },
+  "links": [[0,1,{"route":"elbow"}],[1,2,{"route":"elbow"}],[2,3,{"route":"elbow"}],[3,4,{"route":"elbow"}],[4,5,{"route":"elbow"}]],
+  "cards": [
+    {"kind": "text", "cat": "a", "scene": "Passo 1", "title": "O problema", "x": 30, "y": 210, "w": 500, "h": 380,
+     "text": "Ninguém compra a sua *solução*. As pessoas compram o fim de um *problema*."},
+    {"kind": "list", "cat": "a", "scene": "Passo 2", "title": "Entrevistas", "x": 550, "y": 480, "w": 500, "h": 380, "numbered": true,
+     "caption": "fale com quem sente a dor",
+     "items": [{"text": "10 conversas por semana"}, {"text": "pergunte do passado, não do futuro"}, {"text": "anote as palavras exatas"}, {"text": "procure quem já paga por algo"}]},
+    {"kind": "stat", "cat": "a", "scene": "Passo 3", "title": "Sinal de demanda", "x": 30, "y": 750, "w": 500, "h": 380,
+     "value": 40, "suffix": "%", "label": "diriam que ficariam muito decepcionados", "sub": "o teste de Sean Ellis"},
+    {"kind": "flow", "cat": "b", "scene": "Passo 4", "title": "MVP", "x": 550, "y": 1020, "w": 500, "h": 380,
+     "caption": "o menor ciclo que entrega valor",
+     "nodes": [
+      {"id": "c", "x": 40, "y": 110, "w": 110, "h": 64, "label": "constrói", "icon": "tool"},
+      {"id": "m", "x": 195, "y": 110, "w": 110, "h": 64, "label": "mede", "icon": "chart", "variant": "core"},
+      {"id": "a", "x": 350, "y": 110, "w": 110, "h": 64, "label": "aprende", "icon": "spark"}],
+     "edges": [["c","m"],["m","a"],["a","c",{"loop": true, "label": "a cada semana", "drop": 80}]]},
+    {"kind": "compare", "cat": "c", "scene": "Passo 5", "title": "Primeira venda", "x": 30, "y": 1290, "w": 500, "h": 380,
+     "left": {"title": "Evite", "variant": "bad", "items": ["anúncio pago", "site perfeito", "plano anual"]},
+     "right": {"title": "Faça", "variant": "ok", "items": ["venda direta", "página simples", "mensal barato"]}},
+    {"kind": "bars", "cat": "c", "scene": "Passo 6", "title": "De onde vêm os clientes", "x": 550, "y": 1500, "w": 500, "h": 380,
+     "caption": "nos primeiros 100 clientes",
+     "items": [{"label": "indicação", "value": 46, "display": "46%", "highlight": true}, {"label": "LinkedIn", "value": 28, "display": "28%"}, {"label": "comunidades", "value": 17, "display": "17%"}, {"label": "anúncios", "value": 9, "display": "9%"}]}
+  ],
+  "cta": {"title": "Qual passo é o seu agora?", "text": "Comenta aqui que eu mando o checklist completo."}
+}

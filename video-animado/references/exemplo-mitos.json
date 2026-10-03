@@ -1,0 +1,20 @@
+{
+  "format": "1:1",
+  "title": [{"pill": "Mitos", "color": "#c8402f"}, "do home office"],
+  "subtitle": "o que os dados mostram",
+  "categories": {
+    "m": {"label": "Mito", "color": "#c8402f", "tint": "#fbe6e2"},
+    "d": {"label": "Dado", "color": "#0f7c8c", "tint": "#e0f2f4"}
+  },
+  "cards": [
+    {"kind": "text", "cat": "m", "scene": "Mito 1", "title": "Produtividade", "x": 30, "y": 200, "w": 500, "h": 405,
+     "text": "\"Em casa, ninguém trabalha *de verdade*.\""},
+    {"kind": "stat", "cat": "d", "title": "Pesquisa interna", "x": 550, "y": 200, "w": 500, "h": 405,
+     "value": 13, "prefix": "+", "suffix": "%", "label": "de produtividade no remoto", "caption": "fonte: exemplo ilustrativo"},
+    {"kind": "compare", "cat": "m", "scene": "Mito 2", "title": "Cultura", "x": 30, "y": 625, "w": 500, "h": 405,
+     "left": {"title": "Mito", "variant": "bad", "items": ["cultura some", "time se isola", "ninguém aprende"]},
+     "right": {"title": "Na prática", "variant": "ok", "items": ["rituais claros", "1:1 semanal", "docs vivos"]}},
+    {"kind": "bars", "cat": "d", "title": "O que o time prefere", "x": 550, "y": 625, "w": 500, "h": 405, "caption": "exemplo ilustrativo",
+     "items": [{"label": "híbrido", "value": 58, "display": "58%", "highlight": true}, {"label": "remoto", "value": 31, "display": "31%"}, {"label": "presencial", "value": 11, "display": "11%"}]}
+  ]
+}

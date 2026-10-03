@@ -1,0 +1,66 @@
+{
+  "format": "4:5",
+  "theme": "papel",
+  "briefing": {"assunto": "como orquestrar agentes de IA", "tipo": "passo a passo", "formato": "4:5", "estilo": "papel", "cards": 6, "publico": "devs e engenheiros de IA", "chamada": "salvar e compartilhar", "pontos_obrigatorios": "nenhum"},
+  "title": ["Como", {"pill": "orquestrar"}, "agentes"],
+  "subtitle": "menos agentes, mais controle",
+  "categories": {
+    "planejar": {"label": "Planejar"},
+    "estruturar": {"label": "Estruturar"},
+    "controlar": {"label": "Controlar"}
+  },
+  "links": [[0,1],[1,2],[2,3],[3,4],[4,5]],
+  "cards": [
+    {"kind": "text", "cat": "planejar", "scene": "Passo 1", "title": "Comece simples",
+     "x": 30, "y": 200, "w": 470, "h": 320,
+     "text": "Só parta para vários agentes quando *um agente* com boas ferramentas *não dá conta*."},
+
+    {"kind": "list", "cat": "planejar", "scene": "Passo 2", "title": "Escolha o padrão",
+     "x": 580, "y": 200, "w": 470, "h": 320,
+     "caption": "a tarefa define a arquitetura",
+     "items": [
+       {"text": "cadeia: etapas em sequência", "icon": "refresh"},
+       {"text": "roteador: cada caso a um agente", "icon": "split"},
+       {"text": "paralelo: divide e junta", "icon": "layers"},
+       {"text": "orquestrador e subagentes", "icon": "users"}]},
+
+    {"kind": "flow", "cat": "estruturar", "scene": "Passo 3", "title": "Divida e delegue",
+     "x": 580, "y": 590, "w": 470, "h": 320,
+     "caption": "um coordena, os outros executam",
+     "nodes": [
+       {"id": "t", "x": 15,  "y": 128, "w": 85,  "h": 64, "label": "tarefa", "icon": "doc"},
+       {"id": "o", "x": 120, "y": 122, "w": 135, "h": 76, "label": "orquestrador", "sub": "planeja", "icon": "chip", "variant": "core"},
+       {"id": "a", "x": 325, "y": 70,  "w": 125, "h": 50, "label": "pesquisa", "icon": "search"},
+       {"id": "b", "x": 325, "y": 135, "w": 125, "h": 50, "label": "código", "icon": "code"},
+       {"id": "c", "x": 325, "y": 200, "w": 125, "h": 50, "label": "testes", "icon": "check"}],
+     "edges": [["t","o"],["o","a"],["o","b"],["o","c"]]},
+
+    {"kind": "list", "cat": "estruturar", "scene": "Passo 4", "title": "Contratos claros", "numbered": true,
+     "x": 30, "y": 590, "w": 470, "h": 320,
+     "caption": "subagente não lê mente",
+     "items": [
+       {"text": "um objetivo por subagente"},
+       {"text": "só o contexto necessário"},
+       {"text": "ferramentas mínimas"},
+       {"text": "saída em formato fixo"}]},
+
+    {"kind": "flow", "cat": "controlar", "scene": "Passo 5", "title": "Avalie antes de seguir",
+     "x": 30, "y": 980, "w": 470, "h": 320,
+     "caption": "erro de um agente contamina o próximo",
+     "nodes": [
+       {"id": "r", "x": 20,  "y": 100, "w": 120, "h": 64, "label": "resultado", "icon": "doc"},
+       {"id": "v", "x": 175, "y": 100, "w": 120, "h": 64, "label": "avaliador", "icon": "eye", "variant": "core"},
+       {"id": "ok","x": 330, "y": 100, "w": 120, "h": 64, "label": "aprovado", "icon": "check", "variant": "ok"}],
+     "edges": [["r","v"],["v","ok"],["v","r",{"loop": true, "label": "refaz até passar", "drop": 60}]]},
+
+    {"kind": "list", "cat": "controlar", "scene": "Passo 6", "title": "Observe tudo",
+     "x": 580, "y": 980, "w": 470, "h": 320,
+     "caption": "o que não é medido sai do controle",
+     "items": [
+       {"text": "trace de cada chamada", "icon": "eye"},
+       {"text": "custo e tokens por agente", "icon": "money"},
+       {"text": "limite de passos e tempo", "icon": "clock"},
+       {"text": "humano em ações críticas", "icon": "user"}]}
+  ],
+  "cta": {"title": "Orquestre com intenção", "text": "Salve este passo a passo e compartilhe com quem está montando sistemas multiagente."}
+}

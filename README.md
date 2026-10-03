@@ -47,7 +47,7 @@ Você diz o tema, responde duas perguntas com cliques e recebe um vídeo com car
 ### No Claude Code
 
 ```bash
-git clone https://github.com/SEU-USUARIO/video-animado-skill.git
+git clone https://github.com/eduardo-toste/video-animado-skill.git
 mkdir -p ~/.claude/skills
 cp -r video-animado-skill/video-animado ~/.claude/skills/
 ```
